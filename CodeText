@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+void checkIn(double a)
+{
+
+}
+int main()
+{
+    setlocale(LC_ALL, "");
+    double firstIn, secondIn, thirdIn, checkF, checkS, checkT;
+    int first, second, third;
+    cout << "Введите первую сторону" << endl;
+    cin >> firstIn;
+    cout << "Введите вторую сторону" << endl;
+    cin >> secondIn;
+    cout << "Введите третью сторону" << endl;
+    cin >> thirdIn;
+    first = firstIn;
+    second = secondIn;
+    third = thirdIn;
+    checkT = thirdIn - third;
+    checkF = firstIn - first;
+    checkS = secondIn - second;
+    cout << checkF << checkS << checkT;
+    if ((firstIn < 0) || (secondIn < 0) || (thirdIn < 0)
+        || (secondIn + thirdIn < firstIn) || (checkT != 0 || checkF != 0 || checkS != 0)
+        || (firstIn + secondIn < thirdIn) || (firstIn + thirdIn < secondIn))
+        cout << "Неверные данные";
+    else if ((first == second) || (first == third) || (second == third))
+            cout << "Треугольник равнобедренный";
+        else if ((first == second) && (first == third))
+            cout << "Треугольник равносторонний";
+        else
+            cout << "Треугольник разносторонний";
+    return 0;
+}
