@@ -37,7 +37,7 @@ int main()
     {
         exit(0);
     }
-    if ((second + third < first) || (first + second < third) || (first + third < second))
+    if ((second + third <= first) || (first + second <= third) || (first + third <= second))
     {
         cout << "Данные не соотвествуют правилу построения треугольника!" << endl;
         exit(0);
