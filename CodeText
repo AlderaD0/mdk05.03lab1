@@ -34,17 +34,25 @@ int main()
     cout << "Введите третью сторону" << endl;
     cin >> third;
     if (checking(third) == 0)
+    {
         exit(0);
-    if ((second + third < first)  (first + second < third)  (first + third < second))
+    }
+    if ((second + third < first) || (first + second < third) || (first + third < second))
     {
         cout << "Данные не соотвествуют правилу построения треугольника!" << endl;
         exit(0);
     }
     else if ((first == second) && (first == third))
+    {
         cout << endl << "Треугольник равносторонний";
-    else if ((first == second)  (first == third)  (second == third))
+    }
+    else if ((first == second) || (first == third) || (second == third))
+    {
         cout << endl << "Треугольник равнобедренный";
+    }
     else
+    {
         cout << endl << "Треугольник разносторонний";
+    }
     return 0;
 }
